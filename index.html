@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper - Modern Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">
+                <span class="title-icon">💣</span>
+                MINESWEEPER
+                <span class="title-icon">💣</span>
+            </h1>
+            <p class="subtitle">Modern Edition</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="easy">
+                    <span class="btn-icon">🌱</span>
+                    <span class="btn-text">Easy</span>
+                    <span class="btn-info">9×9 • 10 mines</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="medium">
+                    <span class="btn-icon">🌿</span>
+                    <span class="btn-text">Medium</span>
+                    <span class="btn-info">16×16 • 40 mines</span>
+                </button>
+                <button class="difficulty-btn" data-difficulty="hard">
+                    <span class="btn-icon">🌳</span>
+                    <span class="btn-text">Hard</span>
+                    <span class="btn-info">30×16 • 99 mines</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item mines-counter">
+                <span class="stat-icon">💣</span>
+                <span class="stat-value" id="mines-left">10</span>
+                <span class="stat-label">Mines</span>
+            </div>
+            <button class="new-game-btn" id="new-game-btn">
+                <span class="face-emoji" id="face-emoji">😊</span>
+            </button>
+            <div class="stat-item timer">
+                <span class="stat-icon">⏱️</span>
+                <span class="stat-value" id="timer">000</span>
+                <span class="stat-label">Time</span>
+            </div>
+        </div>
+
+        <div class="game-board-wrapper">
+            <div class="game-board" id="game-board"></div>
+            <div class="game-overlay" id="game-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-icon" id="overlay-icon">🎉</div>
+                    <h2 class="overlay-title" id="overlay-title">You Win!</h2>
+                    <p class="overlay-message" id="overlay-message">Congratulations!</p>
+                    <button class="play-again-btn" id="play-again-btn">Play Again</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sound-toggle">
+            <button class="sound-btn" id="sound-toggle" title="Toggle Sound">
+                <span class="sound-on">🔊</span>
+                <span class="sound-off">🔇</span>
+            </button>
+        </div>
+
+        <footer class="game-footer">
+            <p>Left-click to reveal • Right-click to flag</p>
+        </footer>
+    </div>
+
+    <div class="particles" id="particles"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>

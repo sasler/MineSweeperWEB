@@ -1,0 +1,166 @@
+# 💣 Minesweeper - Modern Edition
+
+A sleek, modern web-based Minesweeper game built with TypeScript, featuring fancy animations and immersive sound effects.
+
+![Minesweeper Modern Edition](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+## 🎮 How to Play
+
+- **Left-click** - Reveal a cell
+- **Right-click** - Place/remove a flag
+- **Goal** - Reveal all cells that don't contain mines without triggering any explosions!
+
+### Rules
+
+1. Numbers indicate how many mines are adjacent to that cell (including diagonals)
+2. Use flags to mark cells you suspect contain mines
+3. The game is won when all non-mine cells are revealed
+4. Clicking on a mine ends the game
+
+## ✨ Features
+
+### 🎯 Game Mechanics
+- **3 Difficulty Levels:**
+  - Easy: 9×9 grid with 10 mines
+  - Medium: 16×16 grid with 40 mines
+  - Hard: 30×16 grid with 99 mines
+- **First-click protection** - You'll never hit a mine on your first click
+- **Auto-cascade reveal** - Empty cells automatically reveal their neighbors
+- **Timer & Mine Counter** - Track your progress
+
+### 🎨 Modern Design
+- Dark theme with neon accents
+- Gradient backgrounds and glowing effects
+- Custom Google Fonts (Orbitron & Rajdhani)
+- Responsive design for all screen sizes
+- Floating background particles
+
+### 🎬 Animations
+- 3D cell flip reveal effect
+- Flag placement with rotation animation
+- Explosion effect when hitting a mine
+- Board shake on game over
+- Confetti celebration on victory
+- Cascade reveal with satisfying delays
+
+### 🔊 Sound Effects
+- Click feedback sounds
+- Cell reveal audio
+- Pleasant chord for empty cell cascades
+- Explosion with low boom
+- Victory fanfare
+- Game over melody
+- Toggle sound on/off
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (for TypeScript compilation and local server)
+
+### Installation
+
+1. Clone or download this repository
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Compile TypeScript (if making changes):
+   ```bash
+   npx tsc
+   ```
+
+4. Start a local server:
+   ```bash
+   npx http-server -p 8080
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://localhost:8080
+   ```
+
+### Quick Start (No Build Required)
+
+If you just want to play, simply open `index.html` in your browser. The compiled JavaScript is already included.
+
+## 📁 Project Structure
+
+```
+MineSweeperWEB/
+├── index.html      # Main HTML file
+├── styles.css      # Styling and animations
+├── game.ts         # TypeScript source code
+├── game.js         # Compiled JavaScript
+├── tsconfig.json   # TypeScript configuration
+├── package.json    # Node.js dependencies
+└── README.md       # This file
+```
+
+## 🛠️ Technical Details
+
+### Technologies Used
+- **TypeScript** - Type-safe game logic
+- **CSS3** - Modern styling with animations and transitions
+- **Web Audio API** - Procedurally generated sound effects
+- **HTML5** - Semantic markup
+
+### Key Classes
+
+- `Minesweeper` - Main game controller handling board state, user input, and game logic
+- `SoundManager` - Manages all audio using the Web Audio API with procedurally generated tones
+
+### Browser Compatibility
+
+Works on all modern browsers that support:
+- ES2020 JavaScript
+- CSS Grid
+- Web Audio API
+- CSS Animations
+
+## 🎨 Customization
+
+### Changing Colors
+
+Edit the CSS variables in `styles.css`:
+
+```css
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #22d3ee;
+    --accent-color: #f472b6;
+    --bg-dark: #0f172a;
+    /* ... more variables */
+}
+```
+
+### Adding New Difficulty Levels
+
+Modify the `difficulties` object in `game.ts`:
+
+```typescript
+private difficulties: Difficulties = {
+    easy: { rows: 9, cols: 9, mines: 10 },
+    medium: { rows: 16, cols: 16, mines: 40 },
+    hard: { rows: 16, cols: 30, mines: 99 },
+    // Add your custom difficulty here
+};
+```
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Inspired by the classic Microsoft Minesweeper
+- Fonts by Google Fonts
+- Built with modern web technologies
+
+---
+
+**Enjoy the game! 🎉**
