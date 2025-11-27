@@ -1,6 +1,10 @@
 # Dependencies
 node_modules/
 
+# Compiled output
+*.js
+!*.config.js
+
 # IDE
 .vscode/
 .idea/
